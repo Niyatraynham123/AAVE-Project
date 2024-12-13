@@ -8,63 +8,62 @@
     <style>
         /* Style for the popup container */
 
+        /* Style for the popup container */
         .popup {
-            display: Hidden;
+            display: none; /* Corrected hidden */
             position: absolute;
             background: #f7f8f5;
             border: 2px solid #d1d9c5;
-            border-radius: 25px;
+            border-radius: 2vw; /* Responsive rounding */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 10px 15px;
+            padding: 2vh 3vw; /* Responsive padding */
             z-index: 1000;
             display: flex;
             align-items: center;
-            width: 300px;
-            height: 60px;
+            width: 30vw; /* Responsive width */
+            height: 8vh; /* Responsive height */
+            max-width: 90vw; /* Prevents overflow */
+            max-height: 20vh;
         }
-
+        
         /* Style for the play/pause button */
-
         .play-button {
             background: #2d3e1d;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 5vh; /* Scales with height */
+            height: 5vh;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            margin-right: 15px;
+            margin-right: 2vw;
         }
-
+        
         /*Style for the audio waves */
-
         .audio-waves {
             display: flex;
             flex-grow: 1;
-            height: 20px;
+            height: 4vh; /* Scales with height */
             align-items: center;
         }
-
+        
         /* Individual wave bars */
-
         .audio-waves span {
             display: inline-block;
-            width: 4px;
+            width: 0.5vw; /* Responsive width */
             height: 100%;
-            margin: 0 2px;
+            margin: 0 0.3vw;
             background: #cbd5a3;
-            border-radius: 5px;
+            border-radius: 0.5vw;
         }
 
-        /* Animation for the audio waves (default: no animation) */
 
+        /* Animation for the audio waves (default: no animation) */
         .audio-waves.animate span {
             animation: bounce .8s infinite ease-in-out;
         }
 
         /* Keyframe for wave animation */
-
         @keyframes bounce {
             0%,
             100% {
